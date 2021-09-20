@@ -10,17 +10,24 @@
 		font-size: 18px;
 		padding: 20px;
 		line-height: 1.7;
-	}
-
-	h2 {
-		padding: 50px 0;
+		p {
+			margin-bottom: 40px;
+			color: $mono-black-200;
+		}
+		h4 {
+			color: $mono-black-300;
+			margin-bottom: 40px;
+			font-size: 1.9rem;
+		}
 	}
 
 	.category-wrapper {
+		margin-top: 40px;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem));
 		grid-gap: 2rem;
 		justify-content: center;
+		color: $mono-black-200;
 
 		.category {
 			overflow: hidden;

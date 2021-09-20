@@ -13,6 +13,7 @@ const LandingPage = () => {
 						for every day of hard work you put in, no matter what discipline you
 						choose.
 					</p>
+					<h4>Class Categories</h4>
 				</div>
 				<CategoryWrapper />
 			</div>
