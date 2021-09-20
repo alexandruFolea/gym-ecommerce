@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import LandingPage from './components/landing-page/LandingPage';
+import Layout from './components/layout/Layout';
+import MembershipPage from './Pages/membership-page/MembershipPage';
+import SalesPage from './Pages/sales/SalesPage';
+import './styles/main.scss';
+import SchedulePage from './Pages/schedule/SchedulePage';
+import Products from './Pages/products/ProductsPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+			<Layout>
+				<Switch>
+					<Route path='/' exact>
+						<LandingPage />
+					</Route>
+					<Route path='/membership' exact>
+						<MembershipPage />
+					</Route>
+					<Route path='/schedule' exact>
+						<SchedulePage />
+					</Route>
+					<Route path='/products' exact>
+						<Products />
+					</Route>
+					<Route path='/sales' exact>
+						<SalesPage />
+					</Route>
+				</Switch>
+			</Layout>
+		</div>
+	);
 }
 
 export default App;

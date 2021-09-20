@@ -1,0 +1,81 @@
+.landing-page {
+	background: $ct-white;
+	height: 100%;
+	width: 100%;
+	padding: 0 10px;
+	position: relative;
+	z-index: 5;
+	scroll-behavior: smooth;
+
+	.landing-banner {
+		@include flex-center-column;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		background: url('../../assets/images/Stripes-Background.jpeg');
+		@include bg-no-repeat;
+		position: relative;
+		z-index: 50;
+
+		h1 {
+			padding-top: 50px;
+			font-size: 28px;
+			line-height: 2;
+			color: $ct-orange;
+			text-transform: uppercase;
+
+			span {
+				font-size: 60px;
+				letter-spacing: 10px;
+				color: $ct-black;
+			}
+		}
+
+		.get-started {
+			border: 1px solid $ct-dark-blue;
+			padding: 12px 30px;
+			color: $ct-dark-blue;
+			margin-bottom: 30px;
+			font-weight: 800;
+
+			&:hover {
+				border: none;
+				background: $ct-orange;
+				color: $ct-dark-blue;
+			}
+		}
+
+		p {
+			font-size: 24px;
+			color: $ct-light-grey;
+			text-shadow: 1px -1px 10px rgba(0, 0, 0, 0.279);
+		}
+
+		.arrow-down {
+			height: 50px;
+			width: auto;
+			margin: 75px 0;
+			cursor: pointer;
+			margin-top: 40px;
+			animation: text-pop-up-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+				infinite alternate-reverse both;
+
+			a {
+				color: $mono-black-700;
+			}
+			svg {
+				height: 100%;
+				width: auto;
+				object-fit: auto;
+				// border: 1px solid black;
+				&:hover {
+					color: $ct-orange;
+					background: $mono-black-900;
+					// background: transparent;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.074);
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}

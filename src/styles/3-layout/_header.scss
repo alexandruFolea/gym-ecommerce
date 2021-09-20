@@ -1,0 +1,104 @@
+.navbar {
+	width: 100vw;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	color: $ct-dark-blue;
+
+	// overflow-x: hidden;
+
+	.logo {
+		font-size: 18px;
+		color: $ct-orange;
+		span {
+			color: $ct-dark-blue;
+		}
+	}
+
+	.nav-menu {
+		display: flex;
+		width: 100%;
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.hamburger {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $ct-dark-blue;
+
+		svg {
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	.nav-list {
+		background: rgb(219, 219, 219);
+		box-shadow: $base-box-shadow;
+		padding: 70px;
+		height: 100vh;
+		width: 100%;
+
+		position: absolute;
+		top: 30px;
+		right: 0;
+		z-index: 25;
+		transform: translateX(150%);
+		transition: 0.4s all ease-in-out;
+
+		&.active {
+			transform: translateX(20px);
+		}
+
+		.main-list {
+			margin-bottom: 30px;
+			height: 200px;
+			display: flex;
+			flex-direction: column;
+			// align-items: center;
+			justify-content: space-evenly;
+
+			li {
+				padding-left: 10px;
+				font-size: $font-size-sm;
+
+				&:hover {
+					font-weight: bold;
+					color: blue;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.login-list {
+			// background: grey;
+			display: inline-block;
+
+			li {
+				padding-left: 10px;
+				font-size: $font-size-sm;
+
+				&:hover {
+					font-weight: bold;
+					color: blue;
+					cursor: pointer;
+				}
+
+				&:nth-of-type(1) {
+					margin-bottom: 20px;
+				}
+				&:nth-of-type(2) {
+					background: blue;
+					color: white;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
