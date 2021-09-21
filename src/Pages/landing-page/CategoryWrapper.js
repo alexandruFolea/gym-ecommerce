@@ -14,7 +14,7 @@ const CategoryWrapper = () => {
 			/>
 			<Section
 				image='https://images.unsplash.com/photo-1616941347251-97a7a124a9a0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJ1bm5pbmd8ZW58MHx8MHxibGFja19hbmRfd2hpdGV8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'
-				title='running'
+				title='Running'
 			/>
 			<Section
 				image='https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHlvZ2F8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60'

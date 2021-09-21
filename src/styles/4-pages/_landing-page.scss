@@ -13,6 +13,7 @@
 		width: 100%;
 		text-align: center;
 		background: url('../../assets/images/Stripes-Background.jpeg');
+		// transform: scaleX(-1);
 		@include bg-no-repeat;
 		position: relative;
 		z-index: 50;

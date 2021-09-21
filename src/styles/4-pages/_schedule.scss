@@ -1,0 +1,220 @@
+.schedule-page {
+	background: rgb(219, 219, 219);
+	height: 100%;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+
+	.schedule-banner {
+		height: 500px;
+		background: url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+		@include bg-no-repeat;
+		@include flex-center-row;
+
+		h1 {
+			color: $mono-black-800;
+			font-size: 50px;
+			text-shadow: 2px 0px 10px rgba(142, 137, 141, 0.628);
+		}
+	}
+
+	.yoga-container {
+		background: url('https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80');
+		@include bg-no-repeat;
+		height: 500px;
+		@include flex-center-column;
+		margin: 20px 0;
+
+		h1 {
+			color: $mono-black-800;
+			font-size: 3.3rem;
+		}
+
+		.yoga-classes {
+			@include flex-center-column;
+			p {
+				color: $mono-black-600;
+				margin: 20px;
+			}
+			.yoga-times {
+				background: $mono-black-600;
+				padding: 10px 20px;
+
+				span {
+					margin: 20px;
+				}
+				// span:not(:last-child) {
+				// 	margin-right: 0;
+				// }
+			}
+		}
+	}
+
+	//tabs container
+	.tabs-container {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 500px;
+		height: 400px;
+		margin: 70px auto 0;
+		word-break: break-all;
+		border: 1px solid rgba(0, 0, 0, 0.274);
+		margin-bottom: 40px;
+
+		@include screen-min(768px) {
+			width: 750px;
+			// font-size: 2rem;
+		}
+
+		.bloc-tabs {
+			display: flex;
+		}
+		.tabs {
+			padding: 15px;
+			text-align: center;
+			width: 50%;
+			background: rgba(128, 128, 128, 0.075);
+			cursor: pointer;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+			box-sizing: content-box;
+			position: relative;
+			outline: none;
+		}
+		.tabs:not(:last-child) {
+			border-right: 1px solid rgba(0, 0, 0, 0.274);
+		}
+
+		.active-tabs {
+			background: white;
+			border-bottom: 1px solid transparent;
+		}
+
+		.active-tabs::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: calc(100% + 2px);
+			height: 5px;
+			background: $ct-orange;
+		}
+
+		button {
+			border: none;
+		}
+		.content-tabs {
+			flex-grow: 1;
+			.content {
+				background: $mono-black-200;
+				padding: 20px;
+				width: 100%;
+				height: 100%;
+				display: none;
+			}
+			h2 {
+				padding: 0px 0 5px 0px;
+				color: $mono-black-900;
+				margin-bottom: 10px;
+			}
+			span {
+				margin-bottom: 10px;
+				padding-bottom: 10px;
+				color: white;
+			}
+
+			.active-content {
+				display: block;
+			}
+
+			ul {
+				list-style: none;
+				margin-top: 30px;
+
+				.day {
+					display: grid;
+					grid-template-columns: repeat(7, 1fr);
+					grid-gap: 10px;
+					margin-bottom: 10px;
+
+					h4 {
+						color: $mono-black-800;
+					}
+
+					p {
+						color: $mono-black-500;
+					}
+				}
+			}
+		}
+	}
+
+	.drop-in {
+		// background: url('../../assets/images/email-icon.png');
+		@include bg-no-repeat;
+		height: 700px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $mono-black-100;
+		padding-left: 20px;
+		margin-bottom: 200px;
+
+		@include screen-min(768px) {
+		}
+
+		.drop-in-top {
+			h1 {
+				margin: 40px 0;
+				text-align: center;
+				font-size: 2.6rem;
+				border-bottom: 2px solid $ct-orange;
+			}
+			h2 {
+				margin: 10px 0;
+				font-size: 2.2rem;
+				// text-align: center;
+			}
+			p {
+				padding: 10px 20px 10px 0;
+				color: $mono-black-200;
+				font-size: 1.2rem;
+				max-width: 600px;
+				margin: 0 auto;
+			}
+		}
+		.drop-in-bottom {
+			h2 {
+				margin: 20px 0;
+				font-size: 2.2rem;
+				// text-align: center;
+			}
+
+			ul {
+				list-style: decimal;
+				padding: 0 10px;
+
+				li {
+					margin-bottom: 5px;
+					font-size: 1.2rem;
+				}
+			}
+		}
+		.drop-in-btn {
+			margin: 40px auto;
+			// margin-left: auto;
+			font-weight: 900;
+			padding: 15px 30px;
+			border: 1px solid black;
+			cursor: pointer;
+			display: inline-block;
+
+			&:hover {
+				background: $ct-orange;
+				color: $mono-black-100;
+			}
+		}
+	}
+}

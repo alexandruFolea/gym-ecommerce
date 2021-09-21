@@ -57,6 +57,7 @@
 		}
 
 		.main-list {
+			list-style: none;
 			margin-bottom: 30px;
 			height: 200px;
 			display: flex;
@@ -79,6 +80,7 @@
 		.login-list {
 			// background: grey;
 			display: inline-block;
+			list-style: none;
 
 			li {
 				padding-left: 10px;

@@ -91,19 +91,19 @@ const MembershipPage = () => {
 							phone='555-555-5555'
 						/>
 						<LocationCard
-							address='1000 W Lake Shore'
+							address='185 E Randolph St.'
 							city='Chicago'
 							zip='60611'
 							phone='555-555-5555'
 						/>
 						<LocationCard
-							address='1000 W Lake Shore'
+							address='4557 W Rogers Ave.'
 							city='Chicago'
 							zip='60611'
 							phone='555-555-5555'
 						/>
 						<LocationCard
-							address='1000 W Lake Shore'
+							address='4 N Clark St.'
 							city='Chicago'
 							zip='60611'
 							phone='555-555-5555'

@@ -6,28 +6,31 @@ import SalesPage from './Pages/sales/SalesPage';
 import './styles/main.scss';
 import SchedulePage from './Pages/schedule/SchedulePage';
 import Products from './Pages/products/ProductsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
 	return (
 		<div className='App'>
 			<Layout>
-				<Switch>
-					<Route path='/' exact>
-						<LandingPage />
-					</Route>
-					<Route path='/membership' exact>
-						<MembershipPage />
-					</Route>
-					<Route path='/schedule' exact>
-						<SchedulePage />
-					</Route>
-					<Route path='/products' exact>
-						<Products />
-					</Route>
-					<Route path='/sales' exact>
-						<SalesPage />
-					</Route>
-				</Switch>
+				<ScrollToTop>
+					<Switch>
+						<Route path='/' exact>
+							<LandingPage />
+						</Route>
+						<Route path='/membership' exact>
+							<MembershipPage />
+						</Route>
+						<Route path='/schedule' exact>
+							<SchedulePage />
+						</Route>
+						<Route path='/products' exact>
+							<Products />
+						</Route>
+						<Route path='/sales' exact>
+							<SalesPage />
+						</Route>
+					</Switch>
+				</ScrollToTop>
 			</Layout>
 		</div>
 	);
