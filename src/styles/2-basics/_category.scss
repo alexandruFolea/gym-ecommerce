@@ -2,38 +2,39 @@
 	height: 100%;
 	width: 100%;
 	text-align: center;
-	margin-bottom: 200px;
+	margin-bottom: 20rem;
 
 	.category-intro {
-		height: 200px;
+		height: 20rem;
 		width: 100%;
-		font-size: 18px;
-		padding: 20px;
+		font-size: 1.8rem;
+		padding: 2rem;
 		line-height: 1.7;
 		p {
-			margin-bottom: 40px;
+			margin-bottom: 4rem;
 			color: $mono-black-200;
-			max-width: 600px;
+			max-width: 60rem;
 			margin: 0 auto;
 		}
 		h4 {
 			color: $mono-black-300;
-			margin-bottom: 40px;
+			margin-bottom: 4rem;
 			font-size: 1.9rem;
 		}
 	}
 
 	.category-wrapper {
-		margin-top: 40px;
+		// background: rgb(203, 203, 203);
+		// margin-top: 1rem;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(16rem, 20rem));
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 30rem));
 		grid-gap: 2rem;
 		justify-content: center;
 		color: $mono-black-200;
 
 		.category {
 			overflow: hidden;
-			box-shadow: 0 2px 20px grey;
+			box-shadow: 0 0.2rem 2rem grey;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -41,21 +42,24 @@
 			transition: transform 200ms ease-in;
 
 			.card-image {
-				height: 16rem;
+				height: 90%;
 				width: auto;
 				object-fit: cover;
 			}
 
 			h4 {
 				padding: 1rem;
+				font-size: 2rem;
 				text-align: center;
+				margin-bottom: 2rem;
 			}
 
 			.info-btn {
 				text-align: center;
 				padding: 1rem;
-				font-size: 1rem;
+				font-size: 1.4rem;
 				margin: 1rem;
+				color: $mono-black-200;
 				border: 1px solid black;
 
 				&:hover {

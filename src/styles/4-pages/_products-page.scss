@@ -1,0 +1,54 @@
+.products-page {
+	.product-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $mono-black-300;
+		letter-spacing: 0.7rem;
+		padding-top: 5rem;
+
+		h1 {
+			font-size: 5rem;
+			border-bottom: 0.2rem solid $ct-orange;
+		}
+	}
+	.products-container {
+		// background: rgb(187, 187, 187);
+
+		padding: 40px;
+		margin: 0 auto;
+
+		.product-selection-list {
+			font-size: 1.6rem;
+
+			list-style: none;
+			display: flex;
+			justify-content: center;
+
+			li {
+				margin: 30px;
+				padding: 1rem 2rem;
+				cursor: pointer;
+
+				&:hover {
+					color: $mono-black-200;
+					background: $ct-orange;
+				}
+			}
+		}
+
+		.product-list {
+			//my wrapper container for the products
+			margin: 2rem;
+			display: grid;
+			grid-gap: 1rem;
+			grid-template-columns: 1fr;
+			justify-content: center;
+
+			@include screen-min(600px) {
+				grid-template-columns: repeat(auto-fit, minmax(14rem, 22rem));
+				grid-gap: 6rem;
+			}
+		}
+	}
+}

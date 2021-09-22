@@ -1,17 +1,16 @@
 .membership-page {
-	background: $mono-black-800;
-	// height: 10%;
-	max-width: 1300px;
+	// background: linear-gradient(rgba($mono-black-900, 0.3), $ct-orange);
+	max-width: 130rem;
 	margin: 0 auto;
 	width: 100%;
 
 	.banner {
 		// width: 100vw;
-		height: 500px;
+		height: 50rem;
 		background: url('../../assets/images/Shoulder-Back-Pose-1109.jpeg');
 		@include bg-no-repeat;
 		position: relative;
-		margin-bottom: 50px;
+		margin-bottom: 5rem;
 	}
 	//baner end
 
@@ -19,31 +18,32 @@
 		display: grid;
 		justify-content: center;
 		margin: 0 auto;
-		grid-template-columns: repeat(auto-fit, minmax(16rem, 30rem));
+		grid-template-columns: repeat(auto-fit, minmax(26rem, 36rem));
 		grid-gap: 2rem;
 
 		.tier {
-			// border: 2px solid black;
 			box-shadow: $base-box-shadow;
-			height: 300px;
-			// margin: 15px;
-			padding: 20px 30px;
-			border-radius: 5px;
+			// width: ;
+			height: 35rem;
+			padding: 2rem 3rem;
+			border-radius: 0.5rem;
 
 			.tier-card-top {
-				margin-bottom: 10px;
+				margin-bottom: 1.2rem;
+				font-size: 1.8rem;
 			}
 
 			.tier-card-body {
 				line-height: 1.5;
-				margin-bottom: 20px;
+				margin-bottom: 2.5rem;
+				font-size: 1.4rem;
 			}
 			button {
 				background: $mono-black-100;
 				color: $mono-black-900;
-				// margin-left: 20px;
-				padding: 15px 30px;
+				padding: 1.5rem 3rem;
 				cursor: pointer;
+				font-size: 1.4rem;
 			}
 		}
 
@@ -61,28 +61,30 @@
 
 	.benefits-wrapper {
 		width: 100%;
-		padding: 30px;
+		padding: 3rem;
 		text-align: center;
-		margin-bottom: 200px;
+		padding-bottom: 20rem;
 
 		.top {
-			margin: 30px 0;
+			margin: 3rem 0;
 			width: 100%;
 			// background: grey;
 
 			h3 {
-				font-size: 24px;
-				color: $mono-black-400;
-				margin-bottom: 20px;
+				font-size: 2.4rem;
+				color: $mono-black-300;
+				margin-bottom: 2rem;
 			}
 
 			.top-lists {
-				padding: 0 0 0 30px;
-				max-width: 650px;
+				padding: 0 0 0 3rem;
+				max-width: 75rem;
 				margin: 0 auto;
+				font-size: 2rem;
+				@include flex-center-column;
 
 				@include screen-min(768px) {
-					display: flex;
+					flex-direction: row;
 					justify-content: space-between;
 				}
 
@@ -90,10 +92,10 @@
 					list-style: none;
 
 					li {
-						margin-bottom: 8px;
+						margin-bottom: 0.8rem;
 						display: flex;
 						svg {
-							margin-right: 20px;
+							margin-right: 2rem;
 						}
 					}
 				}
@@ -101,12 +103,12 @@
 		}
 
 		.middle {
-			font-size: 24px;
-			color: $mono-black-400;
-			margin-bottom: 20px;
+			font-size: 2.4rem;
+			color: $mono-black-300;
+			margin-bottom: 2rem;
 
 			h3 {
-				margin-bottom: 20px;
+				margin-bottom: 2rem;
 			}
 
 			span {
@@ -115,15 +117,18 @@
 
 			p {
 				color: $ct-black;
-				font-size: 16px;
+				font-size: 1.6rem;
 				line-height: 1.7;
+				max-width: 60rem;
+				margin: 0 auto;
 			}
 
 			button {
-				margin: 40px;
-				padding: 15px 25px;
+				margin: 4rem;
+				padding: 1.5rem 2.5rem;
 				background: $ct-orange;
 				color: $ct-dark-blue;
+				cursor: pointer;
 			}
 		}
 
@@ -137,21 +142,24 @@
 			// background: grey;
 
 			h3 {
-				margin-bottom: 40px;
+				margin-bottom: 4rem;
+				font-size: 2.4rem;
+				color: $mono-black-300;
 			}
 
 			.location-card-wrapper {
 				width: 100%;
 				display: grid;
 				justify-content: center;
-				grid-template-columns: repeat(auto-fit, minmax(9rem, 14rem));
+				grid-template-columns: repeat(auto-fit, minmax(9rem, 22rem));
+				grid-gap: 2rem;
 			}
 
 			.card {
-				height: 200px;
-				width: 200px;
+				height: 20rem;
+				width: 20rem;
 				padding: 10px;
-				// border: 1px solid black;
+				border: 1px solid rgba(0, 0, 0, 0.608);
 				box-shadow: $base-box-shadow;
 				display: flex;
 				flex-direction: column;
@@ -162,7 +170,7 @@
 				cursor: pointer;
 				transition: scale 0.6s ease;
 				p {
-					font-size: 14px;
+					font-size: 1.4rem;
 				}
 
 				&:hover {
@@ -170,15 +178,18 @@
 				}
 
 				a {
-					margin-top: 5px;
-					font-size: 14px;
-					border: 1px solid black;
-					padding: 5px 4px;
-					color: $mono-black-200;
+					margin-top: 0.5rem;
+					font-size: 1.4rem;
+					background: rgba($mono-black-200, 0.05);
+					// border: 0.2rem solid black;
+					padding: 1rem;
+					color: $mono-black-300;
 
 					&:hover {
-						font-weight: 600;
-						background: $ct-orange;
+						border: none;
+						// font-weight: 600;
+						color: $ct-orange;
+						background: $mono-black-300;
 					}
 				}
 			}

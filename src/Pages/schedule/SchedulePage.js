@@ -14,6 +14,7 @@ const SchedulePage = () => {
 			<Massage />
 
 			<div className='class-schedule'>
+				<h1>more classes</h1>
 				<Tabs />
 			</div>
 
@@ -23,8 +24,7 @@ const SchedulePage = () => {
 					<h2>Drop In!</h2>
 					<p>
 						Whether you are in town or nearby, whether it is for work or play,
-						come work out with us! <br />
-						Make us your gym home away from home.
+						come work out with us! Make us your gym home away from home.
 					</p>
 				</div>
 				<div className='drop-in-bottom'>

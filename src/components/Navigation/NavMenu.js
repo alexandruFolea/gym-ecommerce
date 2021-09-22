@@ -1,47 +1,48 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import NavLogin from './NavLogin';
-import { FaTimes, FaBars } from 'react-icons/fa';
+import { NavLink, Link } from 'react-router-dom';
+import { FaTimes, FaBars, FaOpencart } from 'react-icons/fa';
+import { GiShoppingCart } from 'react-icons/gi';
 
-const NavMenu = () => {
-	const [open, setOpen] = useState(false);
-	const handleClick = () => setOpen(!open);
+const NavMenu = ({ toggleMobile, isOpen }) => {
 	return (
-		<div className='nav-menu'>
-			<div className={open ? 'nav-list active' : 'nav-list'}>
-				<ul className='main-list'>
-					<li>
-						<Link to='/' onClick={handleClick}>
-							HOME
-						</Link>
-					</li>
-					<li>
-						<Link to='/membership' onClick={handleClick}>
-							MEMBERSHIP
-						</Link>
-					</li>
-					<li>
-						<Link to='/schedule' onClick={handleClick}>
-							SCHEDULE
-						</Link>
-					</li>
-					<li>
-						<Link to='/products' onClick={handleClick}>
-							PRODUCTS
-						</Link>
-					</li>
-					<li>
-						<Link to='/sales' onClick={handleClick}>
-							SALE + MORE
-						</Link>
-					</li>
-				</ul>
-				<NavLogin />
-			</div>
-			<div onClick={handleClick} className='hamburger'>
-				{open ? <FaTimes /> : <FaBars />}
-			</div>
-		</div>
+		<nav className='navbar'>
+			<ul className='navbar__list'>
+				<Link className='navbar__logo' to='/'>
+					okOCha
+				</Link>
+				<li className='navbar__list__item'>
+					<NavLink to='/' exact className='navbar__link'>
+						HOME
+					</NavLink>
+				</li>
+				<li className='navbar__list__item'>
+					<NavLink to='/membership' className='navbar__link'>
+						MEMBERSHIP
+					</NavLink>
+				</li>
+				<li className='navbar__list__item'>
+					<NavLink to='/schedule' className='navbar__link'>
+						SCHEDULE
+					</NavLink>
+				</li>
+				<li className='navbar__list__item'>
+					<NavLink to='/products' className='navbar__link'>
+						PRODUCTS
+					</NavLink>
+				</li>
+				<li className='navbar__list__item'>
+					<NavLink to='/cart' className='navbar__link'>
+						<div className='menu__cart__container'>
+							<p>View Cart</p>
+							<GiShoppingCart />
+						</div>
+					</NavLink>
+				</li>
+				<div className='navbar__button' onClick={toggleMobile}>
+					<FaBars />
+				</div>
+			</ul>
+		</nav>
 	);
 };
 

@@ -9,8 +9,9 @@ const Massage = () => {
 				sweedish couples massage
 			</p>
 			<div className='spa-schedule'>
-				<h3>The spa is open Mon-Sat 7:00a - 5:00p</h3>
-				<span>Sunday: closed</span>
+				<h3>
+					The spa is open Mon - Sat 7:00a - 5:00p <span>Sunday: closed</span>
+				</h3>
 			</div>
 		</div>
 	);

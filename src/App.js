@@ -2,7 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import LandingPage from './Pages/landing-page/LandingPage';
 import Layout from './components/layout/Layout';
 import MembershipPage from './Pages/membership-page/MembershipPage';
-import SalesPage from './Pages/sales/SalesPage';
+import CartPage from './Pages/cart/CartPage';
 import './styles/main.scss';
 import SchedulePage from './Pages/schedule/SchedulePage';
 import Products from './Pages/products/ProductsPage';
@@ -26,8 +26,8 @@ function App() {
 						<Route path='/products' exact>
 							<Products />
 						</Route>
-						<Route path='/sales' exact>
-							<SalesPage />
+						<Route path='/cart' exact>
+							<CartPage />
 						</Route>
 					</Switch>
 				</ScrollToTop>

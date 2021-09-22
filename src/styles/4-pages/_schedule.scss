@@ -1,69 +1,119 @@
 .schedule-page {
-	background: rgb(219, 219, 219);
+	// background: rgb(219, 219, 219);
 	height: 100%;
 	width: 100%;
-	max-width: 1300px;
+	max-width: 130rem;
 	margin: 0 auto;
 
 	.schedule-banner {
-		height: 500px;
+		height: 50rem;
 		background: url('https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
 		@include bg-no-repeat;
 		@include flex-center-row;
 
 		h1 {
 			color: $mono-black-800;
-			font-size: 50px;
-			text-shadow: 2px 0px 10px rgba(142, 137, 141, 0.628);
+			font-size: 6rem;
+			text-shadow: 0.2rem 0px 1rem rgba(142, 137, 141, 0.628);
 		}
 	}
 
 	.yoga-container {
 		background: url('https://images.unsplash.com/photo-1593810451137-5dc55105dace?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80');
 		@include bg-no-repeat;
-		height: 500px;
 		@include flex-center-column;
-		margin: 20px 0;
+		height: 50rem;
+		margin: 2rem 0;
 
 		h1 {
 			color: $mono-black-800;
-			font-size: 3.3rem;
+			font-size: 5.3rem;
 		}
 
 		.yoga-classes {
 			@include flex-center-column;
 			p {
+				font-size: 2.3rem;
+
 				color: $mono-black-600;
-				margin: 20px;
+				margin: 2rem;
 			}
 			.yoga-times {
 				background: $mono-black-600;
-				padding: 10px 20px;
+				padding: 1rem 6rem;
+				font-size: 1.5rem;
 
 				span {
-					margin: 20px;
+					margin: 3rem;
 				}
-				// span:not(:last-child) {
-				// 	margin-right: 0;
-				// }
 			}
 		}
 	}
 
+	.massage-container {
+		background: linear-gradient($ct-orange, rgba($mono-black-900, 0.3));
+		height: 50rem;
+		width: 100%;
+
+		@include flex-center-column;
+
+		h1 {
+			font-size: 4rem;
+			margin-bottom: 2rem;
+			color: $mono-black-100;
+
+			@include respond(phone) {
+				font-size: 2.2rem;
+			}
+		}
+		p {
+			font-size: 1.8rem;
+			color: $mono-black-200;
+			max-width: 400px;
+			text-align: center;
+			margin: 0 auto 4rem;
+			letter-spacing: 0.2rem;
+			line-height: 1.4;
+			@include respond(phone) {
+				font-size: 1.4rem;
+			}
+		}
+
+		.spa-schedule {
+			font-size: 1.8rem;
+			color: $mono-black-200;
+			@include respond(phone) {
+				font-size: 1.4rem;
+			}
+
+			span {
+				text-decoration: line-through;
+				color: $mono-black-400;
+			}
+		}
+	}
+	.class-schedule {
+		h1 {
+			text-align: center;
+			font-size: 3rem;
+			color: $mono-black-300;
+			letter-spacing: 0.3rem;
+		}
+	}
 	//tabs container
 	.tabs-container {
 		display: flex;
 		flex-direction: column;
 		position: relative;
-		width: 500px;
-		height: 400px;
-		margin: 70px auto 0;
+		width: 50rem;
+		height: 40rem;
+		margin: 7rem auto 0;
 		word-break: break-all;
 		border: 1px solid rgba(0, 0, 0, 0.274);
-		margin-bottom: 40px;
+		margin-bottom: 4rem;
 
-		@include screen-min(768px) {
-			width: 750px;
+		@include screen-min(76.8rem) {
+			width: 75rem;
 			// font-size: 2rem;
 		}
 
@@ -71,34 +121,35 @@
 			display: flex;
 		}
 		.tabs {
-			padding: 15px;
+			font-size: 1.8rem;
+			padding: 1.5rem;
 			text-align: center;
 			width: 50%;
 			background: rgba(128, 128, 128, 0.075);
 			cursor: pointer;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+			border-bottom: 0.1rem solid rgba(0, 0, 0, 0.274);
 			box-sizing: content-box;
 			position: relative;
 			outline: none;
 		}
 		.tabs:not(:last-child) {
-			border-right: 1px solid rgba(0, 0, 0, 0.274);
+			border-right: 0.1rem solid rgba(0, 0, 0, 0.274);
 		}
 
 		.active-tabs {
 			background: white;
-			border-bottom: 1px solid transparent;
+			border-bottom: 0.1rem solid transparent;
 		}
 
 		.active-tabs::before {
 			content: '';
 			display: block;
 			position: absolute;
-			top: -5px;
+			top: -0.5rem;
 			left: 50%;
 			transform: translateX(-50%);
-			width: calc(100% + 2px);
-			height: 5px;
+			width: calc(100% + 0.2rem);
+			height: 0.5rem;
 			background: $ct-orange;
 		}
 
@@ -106,22 +157,28 @@
 			border: none;
 		}
 		.content-tabs {
+			font-size: 1.4rem;
+
+			@include screen-min(76.8rem) {
+				font-size: 1.8rem;
+			}
+
 			flex-grow: 1;
 			.content {
 				background: $mono-black-200;
-				padding: 20px;
+				padding: 2rem;
 				width: 100%;
 				height: 100%;
 				display: none;
 			}
 			h2 {
-				padding: 0px 0 5px 0px;
+				padding: 0 0 0.5rem 0;
 				color: $mono-black-900;
-				margin-bottom: 10px;
+				margin-bottom: 1rem;
 			}
 			span {
-				margin-bottom: 10px;
-				padding-bottom: 10px;
+				margin-bottom: 1rem;
+				padding-bottom: 1rem;
 				color: white;
 			}
 
@@ -131,13 +188,13 @@
 
 			ul {
 				list-style: none;
-				margin-top: 30px;
+				margin-top: 3rem;
 
 				.day {
 					display: grid;
 					grid-template-columns: repeat(7, 1fr);
-					grid-gap: 10px;
-					margin-bottom: 10px;
+					grid-gap: 1rem;
+					margin-bottom: 1rem;
 
 					h4 {
 						color: $mono-black-800;
@@ -152,64 +209,81 @@
 	}
 
 	.drop-in {
-		// background: url('../../assets/images/email-icon.png');
+		background: linear-gradient(rgba($mono-black-900, 0.3), $ct-orange);
+
 		@include bg-no-repeat;
-		height: 700px;
+		height: 70rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		color: $mono-black-100;
-		padding-left: 20px;
-		margin-bottom: 200px;
+		padding-left: 2rem;
+		padding-bottom: 20rem;
 
-		@include screen-min(768px) {
+		@include screen-min(76.8rem) {
 		}
 
 		.drop-in-top {
 			h1 {
-				margin: 40px 0;
+				margin: 4rem 0;
 				text-align: center;
-				font-size: 2.6rem;
-				border-bottom: 2px solid $ct-orange;
+				font-size: 5em;
+				border-bottom: 0.2rem solid $ct-orange;
+				@include flex-center-column;
+
+				@include respond(phone) {
+					font-size: 3.2rem;
+				}
 			}
 			h2 {
-				margin: 10px 0;
-				font-size: 2.2rem;
-				// text-align: center;
+				margin: 1rem 0;
+				font-size: 4rem;
+				text-align: center;
+				@include respond(phone) {
+					font-size: 2.8rem;
+				}
 			}
 			p {
-				padding: 10px 20px 10px 0;
+				padding: 1rem 2rem 1rem 0;
 				color: $mono-black-200;
-				font-size: 1.2rem;
-				max-width: 600px;
+				font-size: 1.6rem;
+				max-width: 60rem;
 				margin: 0 auto;
+				text-align: center;
 			}
 		}
 		.drop-in-bottom {
+			@include flex-center-column;
+
 			h2 {
-				margin: 20px 0;
-				font-size: 2.2rem;
-				// text-align: center;
+				margin: 2rem 0;
+				font-size: 4rem;
+				@include respond(phone) {
+					font-size: 2.8rem;
+				}
 			}
 
 			ul {
 				list-style: decimal;
-				padding: 0 10px;
+				padding: 0 1rem;
 
 				li {
-					margin-bottom: 5px;
-					font-size: 1.2rem;
+					margin-bottom: 0.5rem;
+					font-size: 1.6rem;
 				}
 			}
 		}
 		.drop-in-btn {
-			margin: 40px auto;
-			// margin-left: auto;
+			margin: 3rem auto;
+			font-size: 2.8rem;
 			font-weight: 900;
-			padding: 15px 30px;
-			border: 1px solid black;
+			padding: 1rem 3rem;
+			border: 0.1rem solid black;
 			cursor: pointer;
 			display: inline-block;
+			@include respond(phone) {
+				font-size: 2rem;
+			}
 
 			&:hover {
 				background: $ct-orange;
