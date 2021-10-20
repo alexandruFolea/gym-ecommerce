@@ -1,4 +1,3 @@
-import { breakList } from 'prelude-ls';
 import React, { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
 import ProductList from './ProductList';

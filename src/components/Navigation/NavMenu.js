@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { FaTimes, FaBars, FaOpencart } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { GiShoppingCart } from 'react-icons/gi';
 
 const NavMenu = ({ toggleMobile, isOpen }) => {
